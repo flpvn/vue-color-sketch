@@ -177,7 +177,6 @@ export default {
   }
 }
 </script>
-
 <style>
 .vc-sketch-container {
   display: inline-block;

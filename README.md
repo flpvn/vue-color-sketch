@@ -1,10 +1,10 @@
-# vue-color 
+# vue-color-sketch
 
-[![npm](https://img.shields.io/npm/v/vue-color.svg)](https://www.npmjs.com/package/vue-color)
+[![npm](https://img.shields.io/npm/v/vue-color.svg)](https://www.npmjs.com/package/vue-color-sketch)
 
 Color Pickers for Sketch, Photoshop, Chrome & more with Vue.js(vue2.0).  
 
-## [Live demo](http://xiaokaike.github.io/vue-color/)
+## [Live demo](https://flpvn.github.io/vue-color-sketch/)
 
 ![intro](./intro.png)
 
@@ -12,7 +12,7 @@ Color Pickers for Sketch, Photoshop, Chrome & more with Vue.js(vue2.0).
 
 ### NPM
 ```bash
-$ npm install vue-color
+$ npm install vue-color-sketch
 ```
 
 ### CommonJS
@@ -21,18 +21,18 @@ var Photoshop = require('vue-color/src/Photoshop.vue');
 
 new Vue({
   components: {
-    'Photoshop': Photoshop
+    'Sketch': Sketch
   }
 })
 ```
 
 ### ES6
 ```js
-import { Photoshop } from 'vue-color'
+import { Photoshop } from 'vue-color-sketch'
 
 new Vue({
   components: {
-    'photoshop-picker': Photoshop
+    'sketch-picker': Sketch
   }
 })
 ```
@@ -110,7 +110,7 @@ new Vue({
 OR
 
 ```html
-<chrome-picker :value="colors" @input="updateValue"></chrome-picker>
+<sketch-picker :value="colors" @input="updateValue"></chrome-picker>
 ```
 
 ## License
