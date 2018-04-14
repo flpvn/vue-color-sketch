@@ -94,7 +94,7 @@ export default {
       default: false
     }
   },
-  data() {
+  data () {
     return {
       internalIsOpen: false
     }
@@ -146,7 +146,6 @@ export default {
       this.$el.blur()
       this.$emit('close', this.internalValue)
     },
-    // Called by user action
     onBlur (relatedTarget) {
       /* istanbul ignore if */
       if (!this.isOpen) return /* dont hide */
@@ -161,7 +160,6 @@ export default {
     onFallbackButtonClick () {
       this.hidePopover()
     },
-    // Called programmatically
     showPopover () {
       /* istanbul ignore if */
       if (this.isOpen || this.inline || this.disabled) return /* dont show */
@@ -172,8 +170,7 @@ export default {
     },
     togglePopover () {
       this.isOpen ? this.hidePopover() : this.showPopover()
-    },
-
+    }
   }
 }
 </script>

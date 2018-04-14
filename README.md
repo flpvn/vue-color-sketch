@@ -2,7 +2,7 @@
 
 [![npm](https://img.shields.io/npm/v/vue-color.svg)](https://www.npmjs.com/package/vue-color-sketch)
 
-Color Pickers for Sketch, Photoshop, Chrome & more with Vue.js(vue2.0).  
+Color Pickers for Sketch with Vue.js(vue2.0).  
 
 ## [Live demo](https://flpvn.github.io/vue-color-sketch/)
 
@@ -17,18 +17,18 @@ $ npm install vue-color-sketch
 
 ### CommonJS
 ```js
-var Photoshop = require('vue-color/src/Photoshop.vue');
+var Sketch = require('vue-color/src/Sketch.vue');
 
 new Vue({
   components: {
-    'Sketch': Sketch
+    'sketch': Sketch
   }
 })
 ```
 
 ### ES6
 ```js
-import { Photoshop } from 'vue-color-sketch'
+import { Sketch } from 'vue-color-sketch'
 
 new Vue({
   components: {
@@ -44,7 +44,7 @@ The `dist` folder contains `vue-color.js` and `vue-color.min.js` with all compon
 <script src="path/to/vue.js"></script>
 <script src="path/to/vue-color.min.js"></script>
 <script>
-  var Photoshop = VueColor.Photoshop
+  var Sketch = VueColor.Sketch
 </script>
 ```
 
@@ -77,13 +77,7 @@ var colors = { r: 255, g: 0, b: 0 }
 new Vue({
   el: '#app',
   components: {
-    'material-picker': material,
-    'compact-picker': compact,
-    'swatches-picker': swatches,
-    'slider-picker': slider,
-    'sketch-picker': sketch,
-    'chrome-picker': chrome,
-    'photoshop-picker': photoshop
+    'sketch-picker': sketch
   },
   data () {
     return {
@@ -98,19 +92,13 @@ new Vue({
 
 ```html
 <!-- suppose you have the data 'colors' in your component -->
-<material-picker v-model="colors" />
-<compact-picker v-model="colors" />
-<swatches-picker v-model="colors" />
-<slider-picker v-model="colors" />
 <sketch-picker v-model="colors" />
-<chrome-picker v-model="colors" />
-<photoshop-picker v-model="colors" />
 ```
 
 OR
 
 ```html
-<sketch-picker :value="colors" @input="updateValue"></chrome-picker>
+<sketch-picker :value="colors" @input="updateValue"></sketch-picker>
 ```
 
 ## License

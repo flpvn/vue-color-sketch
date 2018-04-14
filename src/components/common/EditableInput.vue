@@ -53,10 +53,6 @@ export default {
         this.$emit('change', data)
       }
     },
-    // **** unused 
-    // handleBlur (e) {
-    //   console.log(e)
-    // },
     handleKeyDown (e) {
       let val = this.val
       let number = Number(val)
@@ -79,13 +75,6 @@ export default {
         }
       }
     }
-    // **** unused 
-    // handleDrag (e) {
-    //   console.log(e)
-    // },
-    // handleMouseDown (e) {
-    //   console.log(e)
-    // }
   }
 }
 </script>
