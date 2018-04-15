@@ -5294,7 +5294,7 @@ exports = module.exports = __webpack_require__(0)(false);
 
 
 // module
-exports.push([module.i, "\n.vc-sketch-container {\r\n  display: inline-block;\r\n  position: relative;\r\n  width: 40px;\r\n  height: 40px;\r\n  border: 1px solid #dedede;\r\n  box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.3);\r\n  border-radius: 4px;\r\n  z-index: 20;\n}\n.vc-sketch-box {\r\n  width: 40px;\r\n  height: 40px;\r\n  cursor: pointer;\n}\n.vc-sketch {\r\n  position: absolute;\r\n  top: calc(100% + 1px);\r\n  left: 0;\r\n  z-index: 90;\r\n  width: 200px;\r\n  padding: 10px 10px 0;\r\n  box-sizing: initial;\r\n  background: #fff;\r\n  border-radius: 4px;\r\n  box-shadow: 0 0 0 1px rgba(0,0,0,.15), 0 8px 16px rgba(0,0,0,.15);\n}\n.vc-sketch-saturation-wrap {\r\n  width: 100%;\r\n  padding-bottom: 75%;\r\n  position: relative;\r\n  overflow: hidden;\n}\n.vc-sketch-controls {\r\n  display: flex;\n}\n.vc-sketch-sliders {\r\n  padding: 4px 0;\r\n  flex: 1;\n}\n.vc-sketch-sliders .vc-hue,\r\n.vc-sketch-sliders .vc-alpha-gradient {\r\n  border-radius: 2px;\n}\n.vc-sketch-hue-wrap {\r\n  position: relative;\r\n  height: 10px;\n}\n.vc-sketch-alpha-wrap {\r\n  position: relative;\r\n  height: 10px;\r\n  margin-top: 4px;\r\n  overflow: hidden;\n}\n.vc-sketch-color-wrap {\r\n  width: 24px;\r\n  height: 24px;\r\n  position: relative;\r\n  margin-top: 4px;\r\n  margin-left: 4px;\r\n  border-radius: 3px;\n}\n.vc-sketch-active-color {\r\n  position: absolute;\r\n  top: 0;\r\n  left: 0;\r\n  right: 0;\r\n  bottom: 0;\r\n  border-radius: 2px;\r\n  box-shadow: inset 0 0 0 1px rgba(0,0,0,.15), inset 0 0 4px rgba(0,0,0,.25);\r\n  z-index: 2;\n}\n.vc-sketch-color-wrap .vc-checkerboard {\r\n  background-size: auto;\n}\n.vc-sketch-field {\r\n  display: flex;\r\n  padding-top: 4px;\n}\n.vc-sketch-field .vc-input__input {\r\n  width: 80%;\r\n  padding: 4px 10% 3px;\r\n  border: none;\r\n  box-shadow: inset 0 0 0 1px #ccc;\r\n  font-size: 11px;\n}\n.vc-sketch-field .vc-input__label {\r\n  display: block;\r\n  text-align: center;\r\n  font-size: 11px;\r\n  color: #222;\r\n  padding-top: 3px;\r\n  padding-bottom: 4px;\r\n  text-transform: capitalize;\n}\n.vc-sketch-field--single {\r\n  flex: 1;\r\n  padding-left: 6px;\n}\n.vc-sketch-field--double {\r\n  flex: 2;\n}\n.vc-sketch-presets {\r\n  margin-right: -10px;\r\n  margin-left: -10px;\r\n  padding-left: 10px;\r\n  padding-top: 10px;\r\n  border-top: 1px solid #eee;\n}\n.vc-sketch-presets-color {\r\n  border-radius: 3px;\r\n  overflow: hidden;\r\n  position: relative;\r\n  display: inline-block;\r\n  margin: 0 10px 10px 0;\r\n  vertical-align: top;\r\n  cursor: pointer;\r\n  width: 16px;\r\n  height: 16px;\r\n  box-shadow: inset 0 0 0 1px rgba(0,0,0,.15);\n}\n.vc-sketch__disable-alpha .vc-sketch-color-wrap {\r\n  height: 10px;\n}\r\n\r\n/* Transitions */\n.vc-sketch-show-hide-enter-active, .vc-sketch-show-hide-leave-active {\r\n  transition: all 0.3s ease;\n}\n.vc-sketch-show-hide-enter, .vc-sketch-show-hide-leave-active {\r\n  opacity: 0;\n}\r\n", ""]);
+exports.push([module.i, "\n.vc-sketch-container {\r\n  display: inline-block;\r\n  position: relative;\r\n  width: 2rem;\r\n  height: 2rem;\r\n  border: 1px solid #dedede;\r\n  box-shadow: 0 0 4px 2px rgba(0, 0, 0, 0.3);\r\n  border-radius: 4px;\r\n  z-index: 20;\n}\n.vc-sketch-container.vc-sketch-open {\r\n  z-index: 21;\n}\n.vc-sketch-box {\r\n  position: absolute;\r\n  width: 100%;\r\n  height: 100%;\r\n  cursor: pointer;\r\n  top: 0;\r\n  left: 0;\r\n  border-radius: 4px;\n}\n.vc-sketch {\r\n  position: absolute;\r\n  top: calc(100% + 1px);\r\n  left: 0;\r\n  z-index: 90;\r\n  width: 200px;\r\n  padding: 10px 10px 0;\r\n  box-sizing: initial;\r\n  background: #fff;\r\n  border-radius: 4px;\r\n  box-shadow: 0 0 0 1px rgba(0,0,0,.15), 0 8px 16px rgba(0,0,0,.15);\n}\n.vc-sketch-saturation-wrap {\r\n  width: 100%;\r\n  padding-bottom: 75%;\r\n  position: relative;\r\n  overflow: hidden;\n}\n.vc-sketch-controls {\r\n  display: flex;\n}\n.vc-sketch-sliders {\r\n  padding: 4px 0;\r\n  flex: 1;\n}\n.vc-sketch-sliders .vc-hue,\r\n.vc-sketch-sliders .vc-alpha-gradient {\r\n  border-radius: 2px;\n}\n.vc-sketch-hue-wrap {\r\n  position: relative;\r\n  height: 10px;\n}\n.vc-sketch-alpha-wrap {\r\n  position: relative;\r\n  height: 10px;\r\n  margin-top: 4px;\r\n  overflow: hidden;\n}\n.vc-sketch-color-wrap {\r\n  width: 24px;\r\n  height: 24px;\r\n  position: relative;\r\n  margin-top: 4px;\r\n  margin-left: 4px;\r\n  border-radius: 3px;\n}\n.vc-sketch-active-color {\r\n  position: absolute;\r\n  top: 0;\r\n  left: 0;\r\n  right: 0;\r\n  bottom: 0;\r\n  border-radius: 2px;\r\n  box-shadow: inset 0 0 0 1px rgba(0,0,0,.15), inset 0 0 4px rgba(0,0,0,.25);\r\n  z-index: 2;\n}\n.vc-sketch-color-wrap .vc-checkerboard {\r\n  background-size: auto;\n}\n.vc-sketch-field {\r\n  display: flex;\r\n  padding-top: 4px;\n}\n.vc-sketch-field .vc-input__input {\r\n  width: 80%;\r\n  padding: 4px 10% 3px;\r\n  border: none;\r\n  box-shadow: inset 0 0 0 1px #ccc;\r\n  font-size: 11px;\n}\n.vc-sketch-field .vc-input__label {\r\n  display: block;\r\n  text-align: center;\r\n  font-size: 11px;\r\n  color: #222;\r\n  padding-top: 3px;\r\n  padding-bottom: 4px;\r\n  text-transform: capitalize;\n}\n.vc-sketch-field--single {\r\n  flex: 1;\r\n  padding-left: 6px;\n}\n.vc-sketch-field--double {\r\n  flex: 2;\n}\n.vc-sketch-presets {\r\n  margin-right: -10px;\r\n  margin-left: -10px;\r\n  padding-left: 10px;\r\n  padding-top: 10px;\r\n  border-top: 1px solid #eee;\n}\n.vc-sketch-presets-color {\r\n  border-radius: 3px;\r\n  overflow: hidden;\r\n  position: relative;\r\n  display: inline-block;\r\n  margin: 0 10px 10px 0;\r\n  vertical-align: top;\r\n  cursor: pointer;\r\n  width: 16px;\r\n  height: 16px;\r\n  box-shadow: inset 0 0 0 1px rgba(0,0,0,.15);\n}\n.vc-sketch__disable-alpha .vc-sketch-color-wrap {\r\n  height: 10px;\n}\r\n\r\n/* Transitions */\n.vc-sketch-show-hide-enter-active, .vc-sketch-show-hide-leave-active {\r\n  transition: all 0.3s ease;\n}\n.vc-sketch-show-hide-enter, .vc-sketch-show-hide-leave-active {\r\n  opacity: 0;\n}\r\n", ""]);
 
 // exports
 
@@ -5415,6 +5415,7 @@ exports.default = {
     hidePopover: function hidePopover() {
       this.internalIsOpen = false;
       this.$el.blur();
+      this.vc_sketch_open = '';
       this.$emit('close', this.internalValue);
     },
     onBlur: function onBlur(relatedTarget) {
@@ -5422,6 +5423,7 @@ exports.default = {
       if (relatedTarget !== null && this.$el.contains(relatedTarget)) return;
 
       this.internalIsOpen = false;
+      this.vc_sketch_open = '';
       this.$emit('close', this.internalValue);
     },
     onFallbackButtonClick: function onFallbackButtonClick() {
@@ -5432,6 +5434,7 @@ exports.default = {
 
       this.internalIsOpen = true;
       this.$el.focus();
+      this.vc_sketch_open = 'vc-sketch-open';
       this.$emit('open');
     },
     togglePopover: function togglePopover() {
@@ -5453,6 +5456,7 @@ var render = function() {
     "div",
     {
       staticClass: "vc-sketch-container",
+      class: _vm.vc_sketch_open,
       attrs: { tabindex: "0" },
       on: {
         blur: function($event) {
@@ -5466,11 +5470,11 @@ var render = function() {
       }
     },
     [
-      _c(
-        "div",
-        { staticClass: "vc-sketch-box", on: { click: _vm.togglePopover } },
-        [_c("div", { style: _vm.triggerStyles })]
-      ),
+      _c("div", {
+        staticClass: "vc-sketch-box",
+        style: { background: _vm.activeColor },
+        on: { click: _vm.togglePopover }
+      }),
       _vm._v(" "),
       _c("transition", { attrs: { name: "vc-sketch-show-hide" } }, [
         _c(
