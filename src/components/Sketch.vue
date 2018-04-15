@@ -1,7 +1,6 @@
 <template>
-  <div class="vc-sketch-container" @blur.self="e => onBlur(e.relatedTarget)" tabindex="0">
-    <div class="vc-sketch-box"  @click="togglePopover">
-      <div :style="triggerStyles"></div>
+  <div class="vc-sketch-container" v-bind:class="vc_sketch_open" @blur.self="e => onBlur(e.relatedTarget)" tabindex="0">
+    <div class="vc-sketch-box"  @click="togglePopover" :style="{background: activeColor}">
     </div>
     <transition name="vc-sketch-show-hide">
       <div v-show="isOpen" :class="['vc-sketch', disableAlpha ? 'vc-sketch__disable-alpha' : '']">
@@ -144,6 +143,7 @@ export default {
     hidePopover () {
       this.internalIsOpen = false
       this.$el.blur()
+      this.vc_sketch_open = ''
       this.$emit('close', this.internalValue)
     },
     onBlur (relatedTarget) {
@@ -155,6 +155,7 @@ export default {
       if (relatedTarget !== null && this.$el.contains(relatedTarget)) return /* dont hide */
 
       this.internalIsOpen = false
+      this.vc_sketch_open = ''
       this.$emit('close', this.internalValue)
     },
     onFallbackButtonClick () {
@@ -166,6 +167,7 @@ export default {
 
       this.internalIsOpen = true
       this.$el.focus()
+      this.vc_sketch_open = 'vc-sketch-open'
       this.$emit('open')
     },
     togglePopover () {
@@ -178,17 +180,24 @@ export default {
 .vc-sketch-container {
   display: inline-block;
   position: relative;
-  width: 40px;
-  height: 40px;
+  width: 2rem;
+  height: 2rem;
   border: 1px solid #dedede;
-  box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 4px 2px rgba(0, 0, 0, 0.3);
   border-radius: 4px;
   z-index: 20;
 }
+.vc-sketch-container.vc-sketch-open {
+  z-index: 21;
+}
 .vc-sketch-box {
-  width: 40px;
-  height: 40px;
+  position: absolute;
+  width: 100%;
+  height: 100%;
   cursor: pointer;
+  top: 0;
+  left: 0;
+  border-radius: 4px;
 }
 .vc-sketch {
   position: absolute;
