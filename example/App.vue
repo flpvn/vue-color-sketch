@@ -1,18 +1,14 @@
 <template>
   <div id="app">
-    <a class="github-fork-ribbon" href="https://github.com/xiaokaike/vue-color" title="Fork me on GitHub">Fork me on GitHub</a>
+    <a class="github-fork-ribbon" href="https://github.com/flpvn/vue-color-sketch" title="Fork me on GitHub">Fork me on GitHub</a>
     <div class="header-container">
       <div class="header-bg" :style="{'background-color': bgc}"></div>
       <header class="header">
         <div class="intro-wrap">
-          <div class="intro">
-            <h1>Vue-color</h1>
-            <p>A Collection of Color Pickers from Sketch, Photoshop, Chrome, Github, Twitter, Material Design & more</p>
+          <div class="intro" :style="{'color': bgc}">
+            <h1>Vue color sketch</h1>
+            <p>A Collection of Color Pickers from Sketch</p>
           </div>
-        </div>
-        <div class="demo-item">
-          <chrome-picker :value="colors" @input="updateValue"></chrome-picker>
-          <h6>Chrome</h6>
         </div>
       </header>
     </div>
@@ -21,71 +17,34 @@
       <div class="demo-list">
         <div class="demo-item">
           <sketch-picker v-model="colors"></sketch-picker>
-          <h6>Sketch</h6>
-        </div>
-        <div class="demo-item">
-          <photoshop-picker v-model="colors" @ok="onOk" @cancel="onCancel"></photoshop-picker>
-          <h6>Photoshop</h6>
+          <h5>Sketch</h5>
         </div>
       </div>
-      <div class="demo-list">
-        <div class="demo-item">
-          <material-picker v-model="colors"></material-picker>
-          <h6>Material</h6>
-        </div>
-        <div class="demo-item">
-          <slider-picker v-model="colors"></slider-picker>
-          <h6>Slider</h6>
-        </div>
-      </div>
-      <div class="demo-list">
-        <div class="demo-item">
-          <compact-picker v-model="colors"></compact-picker>
-          <h6>Compact</h6>
-          <br>
-          <br>
-          <grayscale-picker :value="colors" @input="updateValue"></grayscale-picker>
-          <h6>Grayscale</h6>
-        </div>
-        <div class="demo-item">
-          <swatches-picker v-model="colors"></swatches-picker>
-          <h6>Swatches</h6>
-        </div>
-      </div>
-
-
     </div>
   </div>
 </template>
 
 <script>
-import material from '../src/components/Material.vue'
-import compact from '../src/components/Compact.vue'
-import grayscale from '../src/components/Grayscale.vue'
-import swatches from '../src/components/Swatches.vue'
-import slider from '../src/components/Slider.vue'
 import sketch from '../src/components/Sketch.vue'
-import chrome from '../src/components/Chrome.vue'
-import photoshop from '../src/components/Photoshop.vue'
 
 let defaultProps = {
-  hex: '#194d33',
+  hex: '#96123A',
   hsl: {
-    h: 150,
-    s: 0.5,
-    l: 0.2,
+    h: 342,
+    s: 0.79,
+    l: 0.33,
     a: 1
   },
   hsv: {
-    h: 150,
-    s: 0.66,
-    v: 0.30,
+    h: 342,
+    s: 0.88,
+    v: 0.59,
     a: 1
   },
   rgba: {
-    r: 25,
-    g: 77,
-    b: 51,
+    r: 150,
+    g: 18,
+    b: 58,
     a: 1
   },
   a: 1
@@ -93,14 +52,7 @@ let defaultProps = {
 
 export default {
   components: {
-    'material-picker': material,
-    'compact-picker': compact,
-    'grayscale-picker': grayscale,
-    'swatches-picker': swatches,
-    'slider-picker': slider,
-    'sketch-picker': sketch,
-    'chrome-picker': chrome,
-    'photoshop-picker': photoshop
+    'sketch-picker': sketch
   },
   data () {
     return {
@@ -145,7 +97,7 @@ html {
   top: 0;
   left: 0;
   right: 0;
-  min-height: 580px;
+  min-height: 153px;
   background-color: #333;
   opacity: 0.5;
   z-index: 0;
@@ -153,6 +105,7 @@ html {
 .header {
   display: flex;
   max-width: 780px;
+  min-height: 130px;
   margin: 0 auto;
   padding: 20px 0;
 }
@@ -161,12 +114,12 @@ html {
   margin-right: 100px;
 }
 .intro {
-  width: 300px;
   color: rgba(0, 0, 0, 0.65098);
 }
 .intro > h1 {
+  margin: 10px solid 0;
   font-size: 40px;
-  font-weight: normal;
+  font-weight: 700;
   line-height: 60px;
 }
 .intro > p {
