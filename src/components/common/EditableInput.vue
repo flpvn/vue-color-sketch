@@ -1,6 +1,7 @@
 <template>
   <div class="vc-editable-input">
     <input class="vc-input__input"
+      @blur="e => onBlurInput(e.relatedTarget)"
       :aria-label="desc?label+'('+desc+')':label"
       v-model="val"
       @keydown="handleKeyDown"
@@ -73,6 +74,13 @@ export default {
           this.handleChange(val)
           e.preventDefault()
         }
+      }
+    },
+    onBlurInput (relatedTarget) {
+      if (relatedTarget) {
+        this.$emit('target_sketch', true)
+      } else {
+        this.$emit('target_sketch', false)
       }
     }
   }

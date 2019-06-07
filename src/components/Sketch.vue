@@ -24,7 +24,7 @@
         <div class="vc-sketch-field" v-if="!disableFields">
           <!-- rgba -->
           <div class="vc-sketch-field--double">
-            <ed-in label="hex" :value="hex" @change="inputChange"></ed-in>  
+            <ed-in v-on:target_sketch="openSketch" label="hex" :value="hex" @change="inputChange"></ed-in>  
           </div>
           <div class="vc-sketch-field--single">
             <ed-in label="r" :value="colors.rgba.r" @change="inputChange"></ed-in>
@@ -122,6 +122,7 @@ export default {
       this.colorChange(data)
     },
     inputChange (data) {
+      console.log('inputChange')
       if (!data) {
         return
       }
@@ -172,6 +173,14 @@ export default {
     },
     togglePopover () {
       this.isOpen ? this.hidePopover() : this.showPopover()
+      console.log('this.isOpen', this.isOpen)
+    },
+    openSketch (value) {
+      if (!value) {
+        this.internalIsOpen = false
+        this.vc_sketch_open = ''
+        this.$emit('close', this.internalValue)
+      }
     }
   }
 }

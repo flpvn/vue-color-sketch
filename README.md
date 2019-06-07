@@ -1,6 +1,6 @@
 # vue-color-sketch
 
-[![npm](https://img.shields.io/badge/npm-2.5.1-yellowgreen.svg)](https://www.npmjs.com/package/vue-color-sketch)
+[![npm](https://img.shields.io/badge/npm-2.5.4-yellowgreen.svg)](https://www.npmjs.com/package/vue-color-sketch)
 
 Color Pickers for Sketch with Vue.js(vue2.0).  
 
