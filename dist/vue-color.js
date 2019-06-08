@@ -645,7 +645,6 @@ exports.default = {
       this.colorChange(data);
     },
     inputChange: function inputChange(data) {
-      console.log('inputChange');
       if (!data) {
         return;
       }
@@ -691,7 +690,6 @@ exports.default = {
     },
     togglePopover: function togglePopover() {
       this.isOpen ? this.hidePopover() : this.showPopover();
-      console.log('this.isOpen', this.isOpen);
     },
     openSketch: function openSketch(value) {
       if (!value) {
@@ -937,7 +935,7 @@ exports.default = {
       }
     },
     onBlurInput: function onBlurInput(relatedTarget) {
-      if (relatedTarget) {
+      if (relatedTarget && this.$el.contains(relatedTarget)) {
         this.$emit('target_sketch', true);
       } else {
         this.$emit('target_sketch', false);
@@ -3939,7 +3937,10 @@ var render = function() {
                     [
                       _c("ed-in", {
                         attrs: { label: "r", value: _vm.colors.rgba.r },
-                        on: { change: _vm.inputChange }
+                        on: {
+                          target_sketch: _vm.openSketch,
+                          change: _vm.inputChange
+                        }
                       })
                     ],
                     1
@@ -3951,7 +3952,10 @@ var render = function() {
                     [
                       _c("ed-in", {
                         attrs: { label: "g", value: _vm.colors.rgba.g },
-                        on: { change: _vm.inputChange }
+                        on: {
+                          target_sketch: _vm.openSketch,
+                          change: _vm.inputChange
+                        }
                       })
                     ],
                     1
@@ -3963,7 +3967,10 @@ var render = function() {
                     [
                       _c("ed-in", {
                         attrs: { label: "b", value: _vm.colors.rgba.b },
-                        on: { change: _vm.inputChange }
+                        on: {
+                          target_sketch: _vm.openSketch,
+                          change: _vm.inputChange
+                        }
                       })
                     ],
                     1
@@ -3981,7 +3988,10 @@ var render = function() {
                               "arrow-offset": 0.01,
                               max: 1
                             },
-                            on: { change: _vm.inputChange }
+                            on: {
+                              target_sketch: _vm.openSketch,
+                              change: _vm.inputChange
+                            }
                           })
                         ],
                         1

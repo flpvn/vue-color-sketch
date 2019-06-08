@@ -27,16 +27,16 @@
             <ed-in v-on:target_sketch="openSketch" label="hex" :value="hex" @change="inputChange"></ed-in>  
           </div>
           <div class="vc-sketch-field--single">
-            <ed-in label="r" :value="colors.rgba.r" @change="inputChange"></ed-in>
+            <ed-in v-on:target_sketch="openSketch" label="r" :value="colors.rgba.r" @change="inputChange"></ed-in>
           </div>
           <div class="vc-sketch-field--single">
-            <ed-in label="g" :value="colors.rgba.g" @change="inputChange"></ed-in>
+            <ed-in v-on:target_sketch="openSketch" label="g" :value="colors.rgba.g" @change="inputChange"></ed-in>
           </div>
           <div class="vc-sketch-field--single">
-            <ed-in label="b" :value="colors.rgba.b" @change="inputChange"></ed-in>
+            <ed-in v-on:target_sketch="openSketch" label="b" :value="colors.rgba.b" @change="inputChange"></ed-in>
           </div>
           <div class="vc-sketch-field--single" v-if="!disableAlpha">
-            <ed-in label="a" :value="colors.a" :arrow-offset="0.01" :max="1" @change="inputChange"></ed-in>
+            <ed-in v-on:target_sketch="openSketch" label="a" :value="colors.a" :arrow-offset="0.01" :max="1" @change="inputChange"></ed-in>
           </div>
         </div>
         <div class="vc-sketch-presets">
@@ -122,7 +122,7 @@ export default {
       this.colorChange(data)
     },
     inputChange (data) {
-      console.log('inputChange')
+      // console.log('inputChange')
       if (!data) {
         return
       }
@@ -173,7 +173,7 @@ export default {
     },
     togglePopover () {
       this.isOpen ? this.hidePopover() : this.showPopover()
-      console.log('this.isOpen', this.isOpen)
+      // console.log('this.isOpen', this.isOpen)
     },
     openSketch (value) {
       if (!value) {

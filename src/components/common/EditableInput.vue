@@ -77,7 +77,8 @@ export default {
       }
     },
     onBlurInput (relatedTarget) {
-      if (relatedTarget) {
+      // console.log('relatedTarget', relatedTarget)
+      if (relatedTarget && this.$el.contains(relatedTarget)) {
         this.$emit('target_sketch', true)
       } else {
         this.$emit('target_sketch', false)
